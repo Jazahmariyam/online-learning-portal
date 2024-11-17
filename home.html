@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Learning Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu">
+        <a href="#" class="logo">LearnOnline</a>
+        <ul class="menu-items">
+          <li><a href="#courses" onclick="highlightSection()">Courses</a></li>
+          <li><a href="#mylearning">My Learning</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#about">Know More About Us</a></li>
+        </ul>
+        <div class="right-section">
+          <input type="text" id="search" placeholder="Search..." onkeyup="showSuggestions()">
+          <ul id="suggestions" class="suggestions-list"></ul>
+          <button id="darkModeToggle">🌙</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="welcome">
+        <h1>Welcome to Our Learning Portal</h1>
+        <p>
+          At our online learning platform, we believe in empowering learners with the tools 
+          and resources they need to succeed. Whether you're a beginner or an experienced 
+          professional, our courses are designed to help you achieve your goals and unlock 
+          your full potential. Join us today and take the first step towards a brighter future!
+        </p>
+      </section>
+      
+  
+    <section id="courses">
+      <h1>Explore Our Courses</h1>
+      <div class="course-list" id="courseList"></div>
+      <button id="loadMore" onclick="loadMoreCourses()">Load More</button>
+    </section>
+
+    <section id="mylearning">
+        <h1>My Learning</h1>
+      
+     
+        <h2>Ongoing Courses</h2>
+        <div class="ongoing-courses">
+          <div class="course-card">
+            <img src="images/web.jpg" alt="Web Development">
+            <h3>Web Development</h3>
+            <p>Progress: 70%</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="course-card">
+            <img src="images/data.jpg" alt="Data Science">
+            <h3>Data Science</h3>
+            <p>Progress: 40%</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 40%;"></div>
+            </div>
+          </div>
+          <div class="course-card">
+            <img src="images/ml.jpg" alt="AI & ML">
+            <h3>AI & ML</h3>
+            <p>Progress: 20%</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 20%;"></div>
+            </div>
+          </div>
+        </div>
+      
+       
+        <h2>Completed Courses</h2>
+        <div class="completed-courses">
+          <div class="course-card">
+            <img src="images/photo.jpg" alt="Photography">
+            <h3>Photography</h3>
+            <p>Completed: 100%</p>
+          </div>
+          <div class="course-card">
+            <img src="images/design.jpg" alt="Graphic Design">
+            <h3>Graphic Design</h3>
+            <p>Completed: 100%</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="register">
+        <h1>Register Now</h1>
+        <form id="registrationForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+          <label for="course">Course Name:</label>
+          <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="Photography">Photography</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Programming Basics">Programming Basics</option>
+            <option value="Blockchain Basics">Blockchain Basics</option>
+            <option value="Creative Writing">Creative Writing</option>
+          </select>
+      
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" name="startDate" required>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      
+     
+      
+       
+        <div class="about-section"><section id="about-us">
+        <h1>Know More About Us</h1>
+      
+      
+        <div class="about-section">
+          <h2>Why Learn With Us?</h2>
+          <p>
+            Our platform is committed to providing high-quality, accessible education to learners worldwide. 
+            We focus on combining theoretical knowledge with practical application to ensure you gain 
+            real-world skills. Our interactive lessons, flexible learning schedules, and cutting-edge 
+            curriculum are designed to meet the demands of today’s competitive world. 
+          </p>
+          <div class="about-section">
+            <h2>About Our Professors</h2>
+            <p>
+              Our instructors are industry experts and seasoned educators, ensuring you not only understand concepts 
+              but also apply them effectively.
+            </p>
+          </div>
+          <div class="about-section">
+            <h2>Contact Information</h2>
+            <ul>
+              <li><strong>Email:</strong> support@learningportal.com</li>
+              <li><strong>Phone:</strong> +1 234 567 890</li>
+              <li><strong>Address:</strong> 123 Education Lane, Knowledge City, ED 56789</li>
+            </ul>
+            <p>
+                Follow us on social media to stay updated on the latest courses and learning opportunities:
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+            </p>
+          </div>
+        </section>
+          
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
